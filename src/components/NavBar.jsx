@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
+
 export function NavBar() {
   return (
     <>
-      <button>Home</button>
-      <button>Shop</button>
-      <button>Cart</button>
+    <Link to="/" >Home</Link>
     </>
   );
 }
