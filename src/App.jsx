@@ -1,5 +1,13 @@
 import './App.css'
+import { NavBar } from './components/NavBar';
 
-const App = () => <h1>Our First Test</h1>;
+function App(){
+  return(
+    <>
+    <NavBar></NavBar>
+    </>
+  )
+}
+
 
 export default App;
