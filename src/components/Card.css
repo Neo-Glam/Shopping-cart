@@ -1,0 +1,27 @@
+.Card {
+  border: solid black;
+  max-width: 300px;
+  margin: 5px;
+
+}
+
+.Card>img{
+    justify-items: center;
+}
+
+
+.info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8PX;
+}
+
+.info:last-child{
+    grid-column: span 2 / span 2;
+}
+
+.info>h4{
+    justify-self: end;
+}
