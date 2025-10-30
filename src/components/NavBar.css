@@ -1,0 +1,15 @@
+header{
+  display: grid;
+  grid-auto-flow: column;
+  padding: 5px;
+  position: top fixed;
+  border-bottom: solid black;
+  justify-content: center;
+  gap: 40px;
+}
+
+header>a,header>a.visited{
+  text-decoration: none;
+  text-emphasis: none;
+  color: black;
+}
