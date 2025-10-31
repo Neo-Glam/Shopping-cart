@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import { Cart } from './components/Cart.jsx';
 import { Shop } from './components/Shop.jsx';
+import {CartProvider} from './components/CartProvider.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <CartProvider>
     <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>,
 )
