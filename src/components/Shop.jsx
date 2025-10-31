@@ -1,4 +1,4 @@
-import { useEffect, useState,useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { NavBar } from "./NavBar";
 import { Card } from "./Card";
 import { CartContext } from "./cartcontext";
@@ -7,7 +7,7 @@ import "./Shop.css";
 
 export function Shop() {
   const [Items, SetItems] = useState([]);
-  const [Cart, SetCart] = useContext(CartContext)
+  const [Cart, SetCart] = useContext(CartContext);
 
   useEffect(() => {
     async function fetchItems() {
@@ -25,16 +25,15 @@ export function Shop() {
         <p>{Cart.length}</p>
         <CartContext.Provider value={[Cart, SetCart]}>
           {Items.map((item) => (
-            
-              <div className="item" key={item.id}>
-                <Card
-                  name={item.title}
-                  price={item.price}
-                  bio={item.description}
-                  image={item.image}
-                />
-                <AddToCartButton item={item}></AddToCartButton>
-              </div>
+            <div className="item" key={item.id}>
+              <Card
+                name={item.title}
+                price={item.price}
+                bio={item.description}
+                image={item.image}
+              />
+              <AddToCartButton item={item}></AddToCartButton>
+            </div>
           ))}
         </CartContext.Provider>
       </div>

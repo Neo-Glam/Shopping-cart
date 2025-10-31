@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { CartContext } from "./cartcontext";
 
 export function AddToCartButton({ item }) {
-  const [Value, SetValue] = useState(0);
+  const [Value, SetValue] = useState(1);
   const [Cart, SetCart] = useContext(CartContext);
 
   function addToCart(item, value) {
@@ -16,8 +16,9 @@ export function AddToCartButton({ item }) {
       );
       SetCart(updatedCart);
     }else{
-        SetCart([[...Cart,{...item,quantity:value}]])
+        SetCart([...Cart,{...item,quantity:value}])
     }
+    console.log(Cart)
   }
 
   return (
@@ -26,7 +27,7 @@ export function AddToCartButton({ item }) {
       <div>
         <button
           onClick={() => {
-            if (Value > 0) SetValue(Value - 1);
+            if (Value > 1) SetValue(Value - 1);
           }}
         >
           -
