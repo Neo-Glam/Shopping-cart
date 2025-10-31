@@ -1,31 +1,28 @@
 .Card {
-  max-width: 300px;
+  overflow: hidden;
 }
 
-.Card>img{
-    justify-items: center;
-    justify-self: center;
-    max-height: 200px;
+.Card > img {
+  justify-items: center;
+  justify-self: center;
+  max-height: 150px;
+}
+
+.info {
+  display: grid;
+  gap: 8px;
+
+}
+
+.info>p{
+  color: gray;
+  overflow-y: auto;
+  max-height: 100px;
 }
 
 
-.info{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-    padding: 8PX;
+.Card>p{
+  justify-self: baseline;
+  font-size: larger;
 }
 
-.info:last-child{
-    grid-column: span 2 / span 2;
-}
-
-.info>h4{
-    justify-self: end;
-}
-
-.addToCart{
-display: grid;
-grid-auto-flow: column ;
-}

@@ -1,9 +1,14 @@
 .itemsList{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 5px;
+  justify-content: space-evenly
 }
 
 .item{
-    border: solid;
+    border: solid rgba(128, 128, 128, 0.493) 1px;
+    padding: 5px;
     display: grid;
+    min-width: 250px;
+    max-width: 300px;
 }

@@ -16,7 +16,7 @@ export function NavBar() {
       <Link to="/">Home</Link>
       <Link to="/Shop">Shop</Link>
       <Link to="/Cart">
-        Cart <p>{number}</p>
+        Cart<p>{number}</p>
       </Link>
     </header>
   );

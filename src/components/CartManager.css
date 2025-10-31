@@ -1,0 +1,6 @@
+.incrementer {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  align-self: end;
+}
