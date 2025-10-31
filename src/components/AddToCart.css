@@ -1,0 +1,16 @@
+.addButtons{
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    align-self:end;
+}
+
+.incrementer{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+p{
+align-content: center;
+justify-self: center;
+}

@@ -1,10 +1,11 @@
 .Card {
-  border: solid black;
   max-width: 300px;
 }
 
 .Card>img{
     justify-items: center;
+    justify-self: center;
+    max-height: 200px;
 }
 
 

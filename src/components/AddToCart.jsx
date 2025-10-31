@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { CartContext } from "./cartcontext";
+import "./AddToCart.css";
 
 export function AddToCartButton({ item }) {
   const [Value, SetValue] = useState(1);
@@ -15,25 +16,26 @@ export function AddToCartButton({ item }) {
           : cartItem
       );
       SetCart(updatedCart);
-    }else{
-        SetCart([...Cart,{...item,quantity:value}])
+    } else {
+      SetCart([...Cart, { ...item, quantity: value }]);
     }
-    console.log(Cart)
   }
 
   return (
     <>
-      <button onClick={() => addToCart(item,Value)}>Add To Cart</button>
-      <div>
-        <button
-          onClick={() => {
-            if (Value > 1) SetValue(Value - 1);
-          }}
-        >
-          -
-        </button>
-        <p>{Value}</p>
-        <button onClick={() => SetValue(Value + 1)}>+</button>
+      <div className="addButtons">
+        <button onClick={() => addToCart(item, Value)}>Add To Cart</button>
+        <div className="incrementer">
+          <button
+            onClick={() => {
+              if (Value > 1) SetValue(Value - 1);
+            }}
+          >
+            -
+          </button>
+          <p>{Value}</p>
+          <button onClick={() => SetValue(Value + 1)}>+</button>
+        </div>
       </div>
     </>
   );

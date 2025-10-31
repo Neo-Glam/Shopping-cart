@@ -26,7 +26,7 @@ export function Shop() {
             <div className="item" key={item.id}>
               <Card
                 name={item.title}
-                price={item.price}
+                price={'$'+item.price}
                 bio={item.description}
                 image={item.image}
               />

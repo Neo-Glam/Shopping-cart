@@ -1,8 +1,9 @@
 import { NavBar } from "./NavBar";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./cartcontext";
-import { AddToCartButton } from "./AddToCart";
 import { Card } from "./Card";
+import { CartManager } from "./CartManager";
+import "./Cart.css";
 
 export function Cart() {
   const [Cart, SetCart] = useContext(CartContext);
@@ -16,33 +17,39 @@ export function Cart() {
 
   useEffect(() => {
     async function LoadItems() {
-      const fetchedItem = await Promise.all(Cart.map((item) => FetchItemInfo(item)));
-      SetItems(fetchedItem);
-    }
+    const fetchedItems = await Promise.all(
+      Cart.map((item) =>
+        FetchItemInfo(item).then((data) => ({
+          ...data,
+          quantity: item.quantity || 1,
+        }))
+      )
+    );
+    SetItems(fetchedItems);
+  }
     if (Cart.length > 0) {
       LoadItems();
+      console.log();
     } else {
       SetItems([]);
     }
   }, [Cart]);
 
-
   return (
     <>
       <NavBar></NavBar>
-            <div className="itemsList">
-                {Items.map((item) => (
-                  <div className="item" key={item.id}>
-                    <Card
-                      name={item.title}
-                      price={item.price}
-                      bio={item.description}
-                      image={item.image}
-                    />
-                    <AddToCartButton item={item}></AddToCartButton>
-                  </div>
-                ))}
-            </div>
+      <div className="itemsList">
+        {Items.map((item) => (
+          <div className="item" key={item.id}>
+            <Card
+              name={item.title}
+              price={"$" + item.price}
+              image={item.image}
+            />
+            <CartManager item={item} />
+          </div>
+        ))}
+      </div>
     </>
   );
 }
