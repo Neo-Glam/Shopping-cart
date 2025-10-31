@@ -2,10 +2,12 @@ header{
   display: grid;
   grid-auto-flow: column;
   padding: 5px;
-  position: top fixed;
+  position: sticky;
+  top: 0;
   border-bottom: solid black;
   justify-content: center;
   gap: 40px;
+  background-color: white;
 }
 
 header>a,header>a.visited{

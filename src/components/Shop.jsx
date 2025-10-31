@@ -22,8 +22,6 @@ export function Shop() {
     <>
       <NavBar></NavBar>
       <div className="itemsList">
-        <p>{Cart.length}</p>
-        <CartContext.Provider value={[Cart, SetCart]}>
           {Items.map((item) => (
             <div className="item" key={item.id}>
               <Card
@@ -35,7 +33,6 @@ export function Shop() {
               <AddToCartButton item={item}></AddToCartButton>
             </div>
           ))}
-        </CartContext.Provider>
       </div>
     </>
   );
