@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { NavBar } from "./NavBar";
 import { Card } from "./Card";
 import { CartContext } from "./cartcontext";
@@ -7,7 +7,7 @@ import "./Shop.css";
 
 export function Shop() {
   const [Items, SetItems] = useState([]);
-  const [Cart, SetCart] = useState([]);
+  const [Cart, SetCart] = useContext(CartContext)
 
   useEffect(() => {
     async function fetchItems() {
