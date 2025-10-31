@@ -1,8 +1,6 @@
 .Card {
   border: solid black;
   max-width: 300px;
-  margin: 5px;
-
 }
 
 .Card>img{
@@ -24,4 +22,9 @@
 
 .info>h4{
     justify-self: end;
+}
+
+.addToCart{
+display: grid;
+grid-auto-flow: column ;
 }
