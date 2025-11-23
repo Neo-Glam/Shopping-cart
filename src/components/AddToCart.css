@@ -3,14 +3,30 @@
     grid-auto-flow: column;
     align-content: center;
     align-self:end;
+    gap: 10px;
+    
 }
 
 .incrementer{
     display: grid;
     grid-auto-flow: column;
+    border: 2px solid var(--seccolor);
+    border-radius: 25px;
+
 }
 
 p{
 align-content: center;
 justify-self: center;
+}
+
+
+button{
+    border-radius: 25px;
+    border:none;
+    background-color: white;
+}
+
+.add{
+    background-color: var(--seccolor);
 }

@@ -8,7 +8,7 @@ export function Card({name,image,price,bio}){
                 <h3>{name}</h3>
                 <p>{bio}</p>
             </div>
-            <p>{price}</p>
+            <p className="price">{price}</p>
         </div>
     )
 }

@@ -35,20 +35,34 @@ export function Cart() {
     }
   }, [Cart]);
 
+  const totalPrice = Items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+
   return (
     <>
-      <NavBar></NavBar>
-      <div className="itemsList">
-        {Items.map((item) => (
-          <div className="item" key={item.id}>
-            <Card
-              name={item.title}
-              price={"$" + item.price}
-              image={item.image}
-            />
-            <CartManager item={item} />
+      <NavBar />
+
+      <div className="cartwindo">
+        <div className="itemsList">
+          {Items.map((item) => (
+            <div className="item" key={item.id}>
+              <Card
+                name={item.title}
+                price={"$" + item.price}
+                image={item.image}
+              />
+              <CartManager item={item} />
+            </div>
+          ))}
+        </div>
+        {Items.length > 0 && (
+          <div className="cartTotal">
+            <h2>Total</h2>
+            <p className="price">${totalPrice.toFixed(2)}</p>
           </div>
-        ))}
+        )}
       </div>
     </>
   );

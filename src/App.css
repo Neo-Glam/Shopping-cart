@@ -1,1 +1,5 @@
-
+.hero{
+    justify-items: center;
+    margin-top:10%;
+    color: brown;
+}

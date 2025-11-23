@@ -24,7 +24,7 @@ export function AddToCartButton({ item }) {
   return (
     <>
       <div className="addButtons">
-        <button onClick={() => addToCart(item, Value)}>Add To Cart</button>
+        <button className="add" onClick={() => addToCart(item, Value)}>Add To Cart</button>
         <div className="incrementer">
           <button
             onClick={() => {

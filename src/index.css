@@ -52,3 +52,25 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  --primarycolor: whitesmoke; 
+  --seccolor: #D96846;
+  --tercolor: #596235;
+  --fourcolor: #2F3020;
+  background: var(--primarycolor);
+}
+
+header{
+  background-color: var(--tercolor);
+}
