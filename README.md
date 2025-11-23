@@ -1,33 +1,32 @@
-FakeStore React App
+Application React FakeStore
 
-This is a simple fake e-commerce website built with React.
-It uses the public Fake Store API
- to fetch and display products.
+Il s’agit d’un simple site e-commerce fictif développé avec React.
+Il utilise l’API publique Fake Store API pour récupérer et afficher les produits.
 
-Features
+Fonctionnalités
 
-Home — a short presentation of the website.
+Accueil — une courte présentation du site.
 
-Shop — displays a list of products fetched from the Fake Store API.
+Boutique — affiche une liste de produits récupérés depuis la Fake Store API.
 
-Cart — shows all the items added to the cart, with quantity management and total price.
+Panier — montre tous les articles ajoutés au panier, avec gestion des quantités et prix total.
 
-Technologies Used
+Technologies utilisées
 
 React (Vanilla)
 
-Fetch API (for data from Fake Store API)
+Fetch API (pour récupérer les données de la Fake Store API)
 
-CSS (for styling)
+CSS (pour le style)
 
-About
+À propos
 
-This project was made for learning purposes — to practice React basics such as:
+Ce projet a été réalisé à des fins d’apprentissage — pour pratiquer les bases de React, notamment :
 
-Components
+Les composants
 
-State management (useState, useEffect, useContext)
+La gestion d’état (useState, useEffect, useContext)
 
-API fetching
+La récupération de données via une API
 
-Dynamic rendering
+Le rendu dynamique
